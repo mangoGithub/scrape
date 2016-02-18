@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />  
+    <meta name="description" content="投米网 - 专注于城市白领的金融服务提供商" />
+    <meta name="keywords" content="投米网,财富管理、普惠金融、金融、基金、借款、贷款、高收益、高流动性、零投宝、合约宝、灵活理财" />
+    <link rel="apple-touch-icon" href="resource/images/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="resource/images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="resource/images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="resource/images/touch-icon-ipad-retina.png">
+    <title>阿拉丁神灯</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery.min.js"></script>
+	<script src="js/wScratchPad.min.js"></script>
+    <link href="css/base.css?v=20140630" rel="stylesheet" />
+    <link href="css/god.css?v=20140724" rel="stylesheet" />
+</head>
+<body onselectstart="return false;">
+    <noscript>您的浏览器不支持JavaScript,请使用其它浏览器</noscript>
+    <section date-role="content" id="zy-onload">
+    	<div class="zy-load"></div>
+    </section>
+    <section data-role="content" id="zy-content" class="none">
+        	<div class="god-lay">
+        		<div class="ald_logo"><a href="http://toumi.yixin.com" target="_blank"><img src="images/logo@2x.png" alt="投米" /></a></div>
+            	<div class="scratch_num">
+                    <p>今天还有<span class="w">3</span>次机会</p>
+                </div>
+                <div class="zy-kuang">
+                	<div class="zy-scratch_nowrap"></div><!--未注册/登录 刮刮卡显示状态 -->
+                	<div class="zy-scratch_txt"  class="none">
+                    	<p style="padding-top: 5px; line-height: 1.9em;"> >_<||| 啊哦?</p> 
+                        <p style="line-height: 1.9em;">您的3次抽奖机会<br/>已经用光啦</p>
+                    </div>
+                    <div class="zy-scratch_wrap" style="display: none;">
+                    	<div class="zy-scratch_con">
+                            <div class="zy-scratch_txt prizeText" style="padding-top: 43px;"> 
+                               
+                                <p>&nbsp;&nbsp;&nbsp;你中奖啦～兑换码是：</p>
+                                <p><span class="w1">TXT65DF4BH</span><span class="w2"></span></p>
+                                <p>有效期至2014年11月20日</p>
+                            </div>
+                            <div class="zy-scratch_txt" class="none"> 
+                            	<p>（⊙o⊙）</p>
+                                <p>矮马！阿拉丁没在家，</p>
+                                <p>再擦一次吧！</p>
+                            </div>
+                            
+                        </div>
+                    </div><!--登录以后 刮刮卡显示状态-->
+                </div>
+                <div class="zy-deng"></div>
+            </div>
+            <div class="zy-list">
+                <div class="list">
+                    <div class="list-btn">
+                        <!--<a href="#" class="reg"></a>
+                        <a href="#" class="login"></a>
+                        <a href="#" class="goHome"></a>
+                        <a href="#" class="reload"></a>-->
+                    </div>
+                    <div class="list-two">
+                        <img src="images/two.jpg" width="60"class="mr30"/>
+                        <img src="images/word.png" width="140" class="middle"/>
+                    </div>
+                    <ul class="list-content">
+                        <li class="list-con-tit">活动规则：</li>
+                        <li>
+                            1）即日起，通过本活动页面注册的用户，即可获得<span>3次抽奖机会</span>，每次中奖均可获得电影票兑奖串码1个。
+                        </li>
+                        <li>2）中奖后，影票串码将以短信方式自动发送至您的手机，或使用电脑登录投米网点击<span>个人中心— 账号管理 — 礼券管理 </span>查看。</li>
+                        <li>
+                            <p>3）电影票兑换及影院查询请点击</p>
+                            <a href="#">www.tlcmarketing.cn/hishenghuo</a>
+                        </li>
+                        <li>
+                            <p>4）电影票使用方法请点击</p>
+                            <a href="#" class="zy-block">http://www.tlcmarketing.cn/hishenghuo/index.php/Index/introduction
+</a>
+                        </li>
+                        <li>
+                            <p>5）本活动奖品由嗨生活网提供，电影票使用详情</p>
+                            <span>欢迎拨打客服：400-068-8666</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section><!--content end-->
+</body>
+</html>
+<script>
+/*
+	图片预加载
+	date：2014-09-24
+*/
+var content=document.getElementById('zy-content');
+var loading=document.getElementById('zy-onload');
+var maxH = $(document).outerHeight()||$(body).outerHeight();
+
+loading.style.height=maxH+'px';
+var aImg =['images/deng923.png','images/god-bg.png','images/god-bg923.png','images/mask923.png']; //绝对路径
+onload(aImg,content,loading);	
+function onload(arr,obj1,obj){
+	for(var i=0; i<arr.length; i++){
+		var oImg=new Image();
+		oImg.src=arr[i];
+		oImg.onload=function(){
+			obj1.style.display='block';
+			obj.style.display='none';
+			
+			
+			/*
+			 @logined:是否登录
+			 @flag：是否中奖
+			 @count：次数，0为剩余次数
+			 * */
+			var logined=true,flag=true,count=2,oldMember=false;
+			
+			if(logined){
+				//老用户
+				if(oldMember){
+					$(".list-btn").empty().append('<p><a href="#" class="reg"></a></p><p><a href="#" class="goHome"></a></p>');
+					$(".zy-scratch_txt,.zy-scratch_nowrap").remove();
+					$(".zy-scratch_wrap").show();
+					$(".zy-scratch_con").empty().append('<div class="zy-scratch_txt " style="padding-top:36px;"><p style="text-indent:3em">只有在这个活动注册</p><p>的小伙伴才有抽奖机会哟…</p><p>感谢您的关注：）</p> </div><style>.zy-scratch_txt p{line-height:1.8em;}</style>');
+					
+				}else{
+					//剩余0次机会重新注册和登录
+					if(count==0){
+						
+						if(!flag){
+							//第三次没有中奖	
+							$(".zy-scratch_txt").eq(0).remove()//.eq(0).removeClass("none");
+							$(".zy-scratch_con").empty().append('<div class="zy-scratch_txt "><p>（⊙o⊙）</p><p>矮马！阿拉丁没在家，</p><p>去投米看看吧！</p></div><style>.zy-scratch_txt p{line-height:1.9em;}');
+							$(".list-btn").empty().append('<p><a href="#" class="goHome"></a></p><p><a href="#" class="backHome"></a></p>');
+						}else{
+							$(".zy-scratch_txt").addClass("none").eq(1).removeClass("none");
+							$(".list-btn").empty().append('<p><a href="#" class="goHome"></a></p><p><a href="#" class="backHome"></a></p>');
+						}
+						
+						$(".zy-scratch_wrap").show();	
+						//$(".zy-scratch_txt").eq(0).remove()//.eq(0).removeClass("none");
+						$(".zy-scratch_nowrap").remove()
+						
+						
+					}else{
+						(function a(){					
+							$(".zy-scratch_nowrap").hide();
+							$(".zy-scratch_wrap").show();
+							$(".list-btn").empty();
+							
+							$('.zy-scratch_con').wScratchPad({
+								  size        :40,          
+								  bg          : '', 
+								  fg          : 'images/god-bg.png',  
+								  realtime    : true,      
+								  scratchDown:function(){},
+								  scratchUp:function(e, percent){
+								  		count--;
+								  
+								  },
+								  scratchMove: function(e, percent){
+										if(flag){
+											
+											$(".zy-scratch_txt").addClass("none").eq(1).removeClass("none");											
+										}else{
+											$(".zy-scratch_txt").addClass("none").eq(2).removeClass("none");
+										}
+										$(".list-btn").empty().append('<p><a href="javascript:;" class="reload"></a></p>');
+										
+								  }
+							});//刮刮卡特效调用
+						})();
+					}
+				}
+
+			}else{
+				$(".list-btn").empty().append('<a href="reg.shtml" class="reg"></a><a href="login.shtml" class="login"></a>');
+				$('.zy-scratch_con').wScratchPad('enable', false);
+			}
+	
+		};
+		oImg.onerror=function()
+		{
+			onload(aImg,content,loading);
+		}
+	}	
+}
+
+
+
+
+</script>
